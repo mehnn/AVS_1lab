@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Student adaptation of lazycustard ultrasonic distance alarm",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 40, "left": 20, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "sensor", "top": -100, "left": 290, "attrs": { "distance": "50" } },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 140, "left": 330, "attrs": { "volume": "0.45" } }
+  ],
+  "connections": [
+    [ "uno:5V", "sensor:VCC", "red", [ "h25", "v-205" ] ],
+    [ "uno:GND.1", "sensor:GND", "black", [ "h15", "v-150" ] ],
+    [ "uno:11", "sensor:TRIG", "green", [ "h32", "v-112" ] ],
+    [ "uno:12", "sensor:ECHO", "blue", [ "h43", "v-132" ] ],
+    [ "uno:3", "buzzer:2", "orange", [ "h50", "v95" ] ],
+    [ "uno:GND.2", "buzzer:1", "black", [ "h70", "v60" ] ]
+  ],
+  "dependencies": {}
+}
